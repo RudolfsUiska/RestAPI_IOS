@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 class PhotoViewController: UIViewController, UITableViewDataSource  {
 
     @IBOutlet weak var tableView: UITableView!

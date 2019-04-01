@@ -25,7 +25,6 @@
 		6463123422480C9800765693 /* WebCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6463123322480C9800765693 /* WebCell.swift */; };
 		6463123622480CB400765693 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6463123522480CB400765693 /* MediaCell.swift */; };
 		6463123A224821B700765693 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64631239224821B700765693 /* LoginViewController.swift */; };
-		64948B8D2249065B001F4BBA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64948B8C2249065B001F4BBA /* Alamofire.framework */; };
 		B8A05DE5CEC5BB1B329D71D1 /* Pods_RestAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C33CB291B842E5FCB72216D /* Pods_RestAPITests.framework */; };
 		CA208CD51265E3087866A97E /* Pods_RestAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741F1485EE2AE7891618FED4 /* Pods_RestAPI.framework */; };
 		DE28C113E6EB27312317E34E /* Pods_RestAPIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69A0E7340B3AA9FEB2B09A5 /* Pods_RestAPIUITests.framework */; };
@@ -90,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64948B8D2249065B001F4BBA /* Alamofire.framework in Frameworks */,
 				CA208CD51265E3087866A97E /* Pods_RestAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +211,6 @@
 				646311E8224280AD00765693 /* Sources */,
 				646311E9224280AD00765693 /* Frameworks */,
 				646311EA224280AD00765693 /* Resources */,
-				50AD7A3FFCF9C7936A7A0AB9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -333,28 +330,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		50AD7A3FFCF9C7936A7A0AB9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RestAPI/Pods-RestAPI-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestAPI/Pods-RestAPI-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		64CE0227407D8F8217F4FE76 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

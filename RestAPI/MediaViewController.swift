@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 import AVFoundation
 
 class MediaViewController: UIViewController, UITableViewDataSource  {
