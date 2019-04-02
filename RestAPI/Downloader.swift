@@ -12,8 +12,14 @@ import UIKit
 func download(fileName: String, fileUrlString: String) {
     let fileURL = URL(string: fileUrlString)
     // Create destination URL
+    let now = Date()
+    let formatter = DateFormatter()
+    formatter.timeZone = TimeZone.current
+    formatter.dateFormat = "yyMMddHHmmss"
+    let dateString = formatter.string(from: now)
+    
     let documentsUrl:URL =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL!
-    let destinationFileUrl = documentsUrl.appendingPathComponent(fileName)
+    let destinationFileUrl = documentsUrl.appendingPathComponent("\(dateString)_\(fileName)")
     
     //Create URL to the source file you want to download
     
@@ -27,7 +33,7 @@ func download(fileName: String, fileUrlString: String) {
         if let tempLocalUrl = tempLocalUrl, error == nil {
             // Success
             if let statusCode = (response as? HTTPURLResponse)?.statusCode {
-                print("Successfully downloaded \(fileName). Status code: \(statusCode)")
+                print("Successfully downloaded \(dateString)_\(fileName). Status code: \(statusCode)")
             }
             
             do {
