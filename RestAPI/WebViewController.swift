@@ -64,6 +64,7 @@ class WebViewController: UIViewController, UITableViewDataSource  {
         
         UIApplication.shared.open(URL(string: web[indexPath.row].download_url)!)
     }
+
     @IBAction func dlBtnPressedInside(_ sender: Any) {
         let point = (sender as AnyObject).convert(CGPoint.zero, to: tableView as UIView)
         let indexPath: IndexPath! = tableView.indexPathForRow(at: point)

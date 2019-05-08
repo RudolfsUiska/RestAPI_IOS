@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import PDFKit
 class DocViewController: UIViewController, UITableViewDataSource {
     
     
@@ -64,7 +64,25 @@ class DocViewController: UIViewController, UITableViewDataSource {
     @IBAction func openBtnPressedInside(_ sender: Any) {
         let point = (sender as AnyObject).convert(CGPoint.zero, to: tableView as UIView)
         let indexPath: IndexPath! = tableView.indexPathForRow(at: point)
-        UIApplication.shared.open(URL(string: documents[indexPath.row].download_url)!)
+        //        UIApplication.shared.open(URL(string: documents[indexPath.row].download_url)!)
+        let nsDocumentDirectory = FileManager.SearchPathDirectory.documentDirectory
+        let nsUserDomainMask    = FileManager.SearchPathDomainMask.userDomainMask
+        let paths               = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
+       // download(fileName: documents[indexPath.row].name, fileUrlString: documents[indexPath.row].download_url)
+            
+        
+            if let dirPath = paths.first
+            {
+                let name = documents[indexPath.row].name
+                let docsURL = URL(fileURLWithPath: dirPath).appendingPathComponent(name)
+                //let fileName = URL(fileURLWithPath: name).deletingPathExtension().lastPathComponent
+               
+                fileNamePDF = docsURL
+               // print(docsURL)
+ 
+                
+            }
+   
     }
     
     @IBAction func dlBtnPressedInside(_ sender: Any) {

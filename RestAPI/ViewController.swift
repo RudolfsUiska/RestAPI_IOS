@@ -19,10 +19,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var name_label: UILabel!
     @IBOutlet weak var image_view: UIImageView!
     
+    @IBOutlet weak var photoView: UIView!
+    @IBOutlet weak var backView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchUserData()
-        
+        photoView.layer.cornerRadius = 10
+        backView.layer.cornerRadius = 10
     }
     func fetchUserData() -> Void{
         let url = URL(string: "https://api.github.com/users/RudolfsUiska")
